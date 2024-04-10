@@ -1,0 +1,104 @@
+bridge:
+  name: "bayesianridge"
+  paramgrid:
+      {}
+rvm:
+  name: "ardregression"
+  paramgrid:
+      {}
+lingpr:
+  name: "lingpr"
+  paramgrid:
+    model__alpha: [0.01, 0.1, 1, 10, 100]
+rbfgpr:
+  name: "rbfgpr"
+  paramgrid:
+    model__alpha: [0.01, 0.1, 1, 10, 100]
+    model__kernel__length_scale: [0.01, 0.1, 1, 2, 3, 4, 5]
+lsvr:
+  name: "linearsvr"
+  paramgrid:
+    model__C: [1,10,50,100,500,1000,2000,2500,3000,3500,4000]
+    model__epsilon: [0.01,0.1,0.5,1,2,5,10,100]
+xgb:
+  name: "xgbregressor"
+  kwargs:
+    {}
+  paramgrid:
+    model__n_estimators: [50, 100, 200, 300, 400]
+    model__max_depth: [3, 4, 5, 6, 7]
+    model__eta: [0.01, 0.1, 0.2, 0.3]
+dummy:
+  name: "dummyregressor"
+  kwargs:
+    strategy: "mean"
+  paramgrid:
+      {}
+pyment:
+  name: "pyment"
+  paramgrid:
+      {}
+ens_bridge:
+  name: "ens_bridge"
+  paramgrid:
+      {}
+ens_rvm:
+  name: "ens_rvm"
+  paramgrid:
+      {}
+ens_lingpr:
+  name: "ens_lingpr"
+  paramgrid:
+        model__mri__model__alpha: [0.01, 0.1, 1, 10, 100]
+        model__pet__model__alpha: [0.01, 0.1, 1, 10, 100]
+ens_rbfgpr:
+  name: "ens_rbfgpr"
+  paramgrid:
+        model__mri__model__alpha: [0.01, 0.1, 1, 10, 100]
+        model__mri__model__kernel__length_scale: [0.01, 0.1, 1, 2, 3, 4, 5]
+        model__pet__model__alpha: [0.01, 0.1, 1, 10, 100]
+        model__pet__model__kernel__length_scale: [0.01, 0.1, 1, 2, 3, 4, 5]
+ens_lsvr:
+  name: "ens_lsvr"
+  paramgrid:
+    model__mri__model__C: [1,10,50,100,500,1000,2000,2500,3000,3500,4000]
+    model__mri__model__epsilon: [0.01,0.1,0.5,1,2,5,10,100]
+    model__pet__model__C: [1,10,50,100,500,1000,2000,2500,3000,3500,4000]
+    model__pet__model__epsilon: [0.01,0.1,0.5,1,2,5,10,100]
+ens_xgb:
+  name: "ens_xgb"
+  paramgrid:
+    model__mri__model__n_estimators: [50, 100, 200, 300, 400]
+    model__mri__model__max_depth: [3, 4, 5, 6, 7]
+    model__mri__model__eta: [0.01, 0.1, 0.2, 0.3]
+    model__pet__model__n_estimators: [50, 100, 200, 300, 400]
+    model__pet__model__max_depth: [3, 4, 5, 6, 7]
+    model__pet__model__eta: [0.01, 0.1, 0.2, 0.3]
+ens_py_bridge:
+  name: "ens_py_bridge"
+  paramgrid:
+      {}
+ens_py_rvm:
+  name: "ens_py_rvm"
+  paramgrid:
+      {}
+ens_py_lingpr:
+  name: "ens_py_lingpr"
+  paramgrid:
+        model__pet__model__alpha: [0.01, 0.1, 1, 10, 100]
+ens_py_rbfgpr:
+  name: "ens_py_rbfgpr"
+  paramgrid:
+        model__pet__model__alpha: [0.01, 0.1, 1, 10, 100]
+        model__pet__model__kernel__length_scale: [0.01, 0.1, 1, 2, 3, 4, 5]
+ens_py_lsvr:
+  name: "ens_py_lsvr"
+  paramgrid:
+    model__pet__model__C: [1,10,50,100,500,1000,2000,2500,3000,3500,4000]
+    model__pet__model__epsilon: [0.01,0.1,0.5,1,2,5,10,100]
+ens_py_xgb:
+  name: "ens_py_xgb"
+  paramgrid:
+    model__pet__model__n_estimators: [50, 100, 200, 300, 400]
+    model__pet__model__max_depth: [3, 4, 5, 6, 7]
+    model__pet__model__eta: [0.01, 0.1, 0.2, 0.3]

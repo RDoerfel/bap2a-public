@@ -1,0 +1,63 @@
+{
+    "pipeline": {
+        "preproc": {
+            "steps": {
+                "step1": {
+                    "object": "SelectCols",
+                    "kwargs": {
+                        "keep": "[1]"
+                    }
+                },
+                "step2": {
+                    "object": "SelectCols",
+                    "kwargs": {
+                        "keep": "[2]"
+                    }
+                }
+            }
+        },
+        "est1": {
+            "steps" : {
+                "model": {
+                    "object": "BayesianRidge",
+                    "kwargs": {}
+                }
+            }
+        },
+        "est2": {
+            "steps" : {
+                "model": {
+                    "object": "Ridge",
+                    "kwargs": {}
+                }
+            }
+        }
+    }, 
+    "cross-validation": {
+        "cv_inner": {
+            "object": "KFold",
+            "kwargs": {
+                "n_splits": 5,
+                "shuffle": true,
+                "random_state": 42
+            }
+        },
+        "cv_outer": {
+            "object": "StratifiedKFold",
+            "kwargs": {
+                "n_splits": 5,
+                "shuffle": true,
+                "random_state": 42
+            }
+        }
+    }, 
+    "param_grid": {
+        "est1": {
+            "param1": [1,2,3]
+        },
+        "est2": {
+            "param2": [4,5,6]
+        }
+    }
+}
+

@@ -1,0 +1,147 @@
+experiment-I:
+  description: "Running pipelines II a and b with all rois with no covariates"
+  files:
+    data_file: database.xlsx
+    roi_file: rois_fs.json
+    pipeline_file: pipelines.yml
+    model_file: models.yml
+  data:
+    covarities: ["tracer"]
+    exclude: ["scanner", "camera", "mr_strength", "subject_id", 'gender', 'mr_id', 'both', 'type', 'eITV']
+    tracer: null
+    type: ["subject", "control"]
+  pipelines: 
+    - name: pipeline-I
+      models: [pyment, dummy]
+    - name: pipeline-IIa
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIb
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIc
+      models: [ens_bridge, ens_rvm, ens_lingpr, ens_lsvr, ens_rbfgpr]
+  cv:
+    splits: 5
+    repeats: 20
+
+experiment-II-alt:
+  description: "Running pipelines III a and b with all rois with no covariates for altanserin data"
+  files:
+    data_file: database.xlsx
+    roi_file: rois_fs.json
+    pipeline_file: pipelines.yml
+    model_file: models.yml
+  data:
+    covarities: null
+    exclude: ["scanner", "camera", "mr_strength", "subject_id", 'gender', 'mr_id', 'both', 'type', 'eITV']
+    tracer: a
+    type: ["subject", "control"]
+  pipelines: 
+    - name: pipeline-I
+      models: [pyment, dummy]
+    - name: pipeline-IIIa
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIIb
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIIc
+      models: [ens_bridge, ens_rvm, ens_lingpr, ens_lsvr, ens_rbfgpr]
+  cv:
+    splits: 5
+    repeats: 20
+
+experiment-II-cimbi:
+  description: "Running pipelines III a and b with all rois with no covariates for cimbi data"
+  files:
+    data_file: database.xlsx
+    roi_file: rois_fs.json
+    pipeline_file: pipelines.yml
+    model_file: models.yml
+  data:
+    covarities: null
+    exclude: ["scanner", "camera", "mr_strength", "subject_id", 'gender', 'mr_id', 'both', 'type', 'eITV']
+    tracer: C
+    type: ["subject", "control"]
+  pipelines: 
+    - name: pipeline-I
+      models: [pyment, dummy]
+    - name: pipeline-IIIa
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIIb
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIIc
+      models: [ens_bridge, ens_rvm, ens_lingpr, ens_lsvr, ens_rbfgpr]
+  cv:
+    splits: 5
+    repeats: 20
+
+experiment-III:
+  description: "Run with pyment instead of mri"
+  files:
+    data_file: database.xlsx
+    roi_file: rois_fs.json
+    pipeline_file: pipelines.yml
+    model_file: models.yml
+  data:
+    covarities: ["tracer"]
+    exclude: ["scanner", "camera", "mr_strength", "subject_id", 'gender', 'mr_id', 'both', 'type', 'eITV']
+    tracer: null
+    type: ["subject", "control"]
+  pipelines: 
+    - name: pipeline-I
+      models: [pyment, dummy]
+    - name: pipeline-IIa
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IVc
+      models: [ens_py_bridge, ens_py_rvm, ens_py_lingpr, ens_py_lsvr, ens_py_rbfgpr]
+  cv:
+    splits: 5
+    repeats: 20
+
+experiment-IV:
+  description: "Running pipelines II a and b with all rois with no covariates, leaving AD and controls"
+  files:
+    data_file: database.xlsx
+    roi_file: rois_fs.json
+    pipeline_file: pipelines.yml
+    model_file: models.yml
+  data:
+    covarities: ["tracer"]
+    exclude: ["scanner", "camera", "mr_strength", "subject_id", 'gender', 'mr_id', 'both', 'type', 'eITV']
+    tracer: null
+    type: ["subject"]
+  pipelines: 
+    - name: pipeline-I
+      models: [pyment, dummy]
+    - name: pipeline-IIa
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIb
+      models: [bridge, rvm, lingpr, lsvr, rbfgpr]
+    - name: pipeline-IIc
+      models: [ens_bridge, ens_rvm, ens_lingpr, ens_lsvr, ens_rbfgpr]
+  cv:
+    splits: 5
+    repeats: 20
+
+experiment-V:
+  description: "Train on all exclude control/AD"
+  files:
+    data_file: database.xlsx
+    roi_file: rois_fs.json
+    pipeline_file: pipelines.yml
+    model_file: models.yml
+  data:
+    covarities: ["tracer"]
+    exclude: ["scanner", "camera", "mr_strength", "subject_id", 'gender', 'mr_id', 'both', 'eITV']
+    tracer: null
+    type: ["subject"]
+  pipelines: 
+    - name: pipeline-I
+      models: [pyment, dummy]
+    - name: pipeline-IIa
+      models: [bridge]
+    - name: pipeline-IIb
+      models: [bridge]
+    - name: pipeline-IIc
+      models: [ens_bridge]
+  cv:
+    splits: 5
+    repeats: 20

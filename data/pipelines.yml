@@ -1,0 +1,95 @@
+pipeline-I: 
+  descr: 'Pipeline for only the MR data (pyment).'
+  steps:
+  - name: colselector
+    kwargs:
+      keep: [pyment] 
+
+pipeline-IIa: 
+  descr: 'Pipeline for harmonized PET data, only PET.'
+  steps:
+  - name: dimap
+    kwargs:
+      cat_col: 'tracer_C'
+      sample_col: 'chron_age_group'
+      pattern: "pet_"
+      match_nsamples: True
+  - name: colpattern
+    kwargs:
+      pattern: "pet_"
+  - name: columnscaler
+    kwargs:
+      transformers: [scaler, onehot]
+      remainder: 'passthrough'
+
+pipeline-IIb: 
+  descr: 'Pipeline for harmonized PET data, only MRI.'
+  steps:
+  - name: normeitv
+    kwargs:
+      pattern: "mri_"
+      icv_col: "icv"
+  - name: colpattern
+    kwargs:
+      pattern: "mri_"
+  - name: columnscaler
+
+pipeline-IIc:
+  descr: 'Pipeline for harmonized PET data, both PET and MRI.'
+  steps:
+  - name: dimap
+    kwargs:
+      cat_col: 'tracer_C'
+      sample_col: 'chron_age_group'
+      pattern: "pet_"
+      match_nsamples: True
+  - name: normeitv
+    kwargs:
+      pattern: "mri_"
+      icv_col: "icv"
+  - name: colpattern
+    kwargs:
+      pattern: "(pet_|mri_)"
+  - name: columnscaler
+
+pipeline-IIIa: 
+  descr: 'Pipeline for Altanserin data and only PET.'
+  steps:
+  - name: colpattern
+    kwargs:
+      pattern: "pet_"
+  - name: columnscaler
+
+pipeline-IIIb: 
+  descr: 'Pipeline for Altanserin data and only MRI.'
+  steps:
+  - name: normeitv
+    kwargs:
+      pattern: "mri_"
+      icv_col: "icv"
+  - name: colpattern
+    kwargs:
+      pattern: "mri_"
+  - name: columnscaler
+
+pipeline-IIIc:
+  descr: 'Pipeline for Altanserin data and both PET and MRI.'
+  steps:
+  - name: colpattern
+    kwargs:
+      pattern: "(pet_|mri_)"
+  - name: columnscaler
+
+pipeline-IVc:
+  descr: 'Pipeline for Altanserin data and both PET and MRI (pyment).'
+  steps:
+  - name: dimap
+    kwargs:
+      cat_col: 'tracer_C'
+      sample_col: 'chron_age_group'
+      pattern: "pet_"
+      match_nsamples: True
+  - name: colpattern
+    kwargs:
+      pattern: "(pet_|pyment)"
+  - name: columnscaler

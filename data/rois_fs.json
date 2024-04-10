@@ -1,0 +1,462 @@
+{
+    "cerebellum": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Cerebellum-Exterior",
+                    "Left-Cerebellum-White-Matter",
+                    "Left-Cerebellum-Cortex"
+                ],
+                "index": [
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Cerebellum-Exterior",
+                    "Right-Cerebellum-White-Matter",
+                    "Right-Cerebellum-Cortex"
+                ],
+                "index": [
+                    45,
+                    46,
+                    47
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "caudate": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Caudate"
+                ],
+                "index": [
+                    11
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Caudate"
+                ],
+                "index": [
+                    50
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "accumbens": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Accumbens-area"
+                ],
+                "index": [
+                    26
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Accumbens-area"
+                ],
+                "index": [
+                    58
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "pallidum": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Pallidum"
+                ],
+                "index": [
+                    13
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Pallidum"
+                ],
+                "index": [
+                    52
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "putamen": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Putamen"
+                ],
+                "index": [
+                    12
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Putamen"
+                ],
+                "index": [
+                    51
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "thalamus": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Thalamus-Proper"
+                ],
+                "index": [
+                    10
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Thalamus-Proper"
+                ],
+                "index": [
+                    49
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "brain-stem": {
+        "hemi": {
+            "both": {
+                "label": [
+                    "Brain-Stem"
+                ],
+                "index": [
+                    16
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "hippocampus": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Hippocampus"
+                ],
+                "index": [
+                    17
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Hippocampus"
+                ],
+                "index": [
+                    53
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "amygdala": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "Left-Amygdala"
+                ],
+                "index": [
+                    18
+                ]
+            },
+            "rh": {
+                "label": [
+                    "Right-Amygdala"
+                ],
+                "index": [
+                    54
+                ]
+            }
+        },
+        "location": "subcortical",
+        "file": "aparc+aseg"
+    },
+    "insula": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-insula"
+                ],
+                "index": [
+                    1035
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-insula"
+                ],
+                "index": [
+                    2035
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    },
+    "cingulate": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-caudalanteriorcingulate",
+                    "ctx-lh-rostralanteriorcingulate",
+                    "ctx-lh-isthmuscingulate",
+                    "ctx-lh-posteriorcingulate"
+                ],
+                "index": [
+                    1002,
+                    1026,
+                    1010,
+                    1023
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-caudalanteriorcingulate",
+                    "ctx-rh-rostralanteriorcingulate",
+                    "ctx-rh-isthmuscingulate",
+                    "ctx-rh-posteriorcingulate"
+                ],
+                "index": [
+                    2002,
+                    2026,
+                    2010,
+                    2023
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    },
+    "frontal": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-paracentral",
+                    "ctx-lh-precentral",
+                    "ctx-lh-parsopercularis",
+                    "ctx-lh-parstriangularis",
+                    "ctx-lh-rostralmiddlefrontal",
+                    "ctx-lh-caudalmiddlefrontal",
+                    "ctx-lh-frontalpole",
+                    "ctx-lh-medialorbitofrontal",
+                    "ctx-lh-superiorfrontal",
+                    "ctx-lh-lateralorbitofrontal",
+                    "ctx-lh-parsorbitalis"
+                ],
+                "index": [
+                    1017,
+                    1024,
+                    1018,
+                    1020,
+                    1027,
+                    1003,
+                    1032,
+                    1014,
+                    1028,
+                    1012,
+                    1019
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-paracentral",
+                    "ctx-rh-precentral",
+                    "ctx-rh-parsopercularis",
+                    "ctx-rh-parstriangularis",
+                    "ctx-rh-rostralmiddlefrontal",
+                    "ctx-rh-caudalmiddlefrontal",
+                    "ctx-rh-frontalpole",
+                    "ctx-rh-medialorbitofrontal",
+                    "ctx-rh-superiorfrontal",
+                    "ctx-rh-lateralorbitofrontal",
+                    "ctx-rh-parsorbitalis"
+                ],
+                "index": [
+                    2017,
+                    2024,
+                    2018,
+                    2020,
+                    2027,
+                    2003,
+                    2032,
+                    2014,
+                    2028,
+                    2012,
+                    2019
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    },
+    "temporal": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-inferiortemporal",
+                    "ctx-lh-middletemporal",
+                    "ctx-lh-bankssts",
+                    "ctx-lh-superiortemporal",
+                    "ctx-lh-transversetemporal"
+                ],
+                "index": [
+                    1009,
+                    1015,
+                    1001,
+                    1030,
+                    1034
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-inferiortemporal",
+                    "ctx-rh-middletemporal",
+                    "ctx-rh-bankssts",
+                    "ctx-rh-superiortemporal",
+                    "ctx-rh-transversetemporal"
+                ],
+                "index": [
+                    2009,
+                    2015,
+                    2001,
+                    2030,
+                    2034
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    },
+    "parietal": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-inferiorparietal",
+                    "ctx-lh-postcentral",
+                    "ctx-lh-superiorparietal",
+                    "ctx-lh-supramarginal",
+                    "ctx-lh-precuneus"
+                ],
+                "index": [
+                    1008,
+                    1022,
+                    1029,
+                    1031,
+                    1025
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-inferiorparietal",
+                    "ctx-rh-postcentral",
+                    "ctx-rh-superiorparietal",
+                    "ctx-rh-supramarginal",
+                    "ctx-rh-precuneus"
+                ],
+                "index": [
+                    2008,
+                    2022,
+                    2029,
+                    2031,
+                    2025
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    },
+    "occipital": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-lateraloccipital",
+                    "ctx-lh-cuneus",
+                    "ctx-lh-lingual",
+                    "ctx-lh-pericalcarine"
+                ],
+                "index": [
+                    1011,
+                    1005,
+                    1013,
+                    1021
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-lateraloccipital",
+                    "ctx-rh-cuneus",
+                    "ctx-rh-lingual",
+                    "ctx-rh-pericalcarine"
+                ],
+                "index": [
+                    2011,
+                    2005,
+                    2013,
+                    2021
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    },
+    "parahippocampalgyrus": {
+        "hemi": {
+            "lh": {
+                "label": [
+                    "ctx-lh-parahippocampal",
+                    "ctx-lh-entorhinal",
+                    "ctx-lh-temporalpole",
+                    "ctx-lh-fusiform"
+                ],
+                "index": [
+                    1016,
+                    1006,
+                    1033,
+                    1007
+                ]
+            },
+            "rh": {
+                "label": [
+                    "ctx-rh-parahippocampal",
+                    "ctx-rh-entorhinal",
+                    "ctx-rh-temporalpole",
+                    "ctx-rh-fusiform"
+                ],
+                "index": [
+                    2016,
+                    2006,
+                    2033,
+                    2007
+                ]
+            }
+        },
+        "location": "cortical",
+        "file": "aparc+aseg"
+    }
+}

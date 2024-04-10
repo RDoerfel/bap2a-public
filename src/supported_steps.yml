@@ -1,0 +1,70 @@
+
+bayesianridge:
+  name: "bayesianridge"
+  paramgrid: {}
+ardregression:
+  name: "ardregression"
+  paramgrid: {}
+lingpr: 
+  name: "lingpr"
+  paramgrid: {}
+rbfgpr:
+  name: "rbfgpr"
+  paramgrid: {}
+linearsvr:
+  name: "linearsvr"
+  paramgrid: {}
+xgbregressor:
+  name: "xgbregressor"
+  kwargs: {}
+  paramgrid: {}
+dummyregressor:
+  name: "dummyregressor"
+  kwargs:
+    strategy: "mean"
+  paramgrid: {}
+pyment:
+  name: "pyment"
+  paramgrid: {}
+ens_bridge:
+  name: "ens_bridge"
+  paramgrid: {}
+ens_rvm:
+  name: "ens_rvm"
+  paramgrid: {}
+ens_lingpr:
+  name: "ens_lingpr"
+  paramgrid: {}
+ens_rbfgpr:
+  name: "ens_rbfgpr"
+  paramgrid: {}
+ens_lsvr:
+  name: "ens_lsvr"
+  paramgrid: {}
+ens_xgb:
+  name: "ens_xgb"
+  paramgrid: {}
+normeitv:
+  name: normeitv
+  kwargs:
+    pattern: "mri_"
+colpattern:
+  name: colpattern
+  kwargs:
+    pattern: "mri_"
+columnscaler:
+  name: columnscaler
+  name: dimap
+  kwargs:
+    cat_col: 'tracer_C'
+    sample_col: 'chron_age_group'
+    pattern: "pet_"
+    match_nsamples: True
+scaler:
+  name: scaler
+  kwargs:
+    with_mean: True
+colselector:
+  name: colselector
+  kwargs:
+    keep: [pyment] 

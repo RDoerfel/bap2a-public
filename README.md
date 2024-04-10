@@ -23,3 +23,20 @@ We find that both the cerebral 5-HT2AR binding (mean MAE=6.63 years, std=0.74 ye
   publisher = {Cold Spring Harbor Laboratory},
   doi = {10.1101/2024.02.05.578968},
 ``` 
+
+## Usage
+To use the code in this repository, you need to install the local package. This can be done by running the following command in the root of the repository:
+```bash
+# clone the repository
+https://github.com/RDoerfel/bap2a-public.git
+
+# install the environment
+conda env create -f environment.yml
+
+# activate the environment
+conda activate bap2a-public
+
+# install the package
+pip install -e .
+
+```

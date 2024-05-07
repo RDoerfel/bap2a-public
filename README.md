@@ -2,6 +2,7 @@
 Scripts and documentation for the paper "Multimodal brain age prediction using machine learning: combining structural MRI and 5-HT2AR PET derived features".
 
 bioRxiv: [https://www.biorxiv.org/content/10.1101/2024.02.05.578968v2](https://www.biorxiv.org/content/10.1101/2024.02.05.578968v2)
+GeroScience: [https://doi.org/10.1007/s11357-024-01148-6](https://doi.org/10.1007/s11357-024-01148-6)
 
 ## Abstract
 To better assess the pathology of neurodegenerative disorders and the efficacy of neuroprotective interventions, it is necessary to develop biomarkers that can accurately capture age-related biological changes in the human brain. Brain serotonin 2A receptors (5-HT2AR) show a particularly profound age-related decline and are also reduced in neurodegenerative disorders, such as Alzheimer’s disease.
@@ -14,14 +15,20 @@ We find that both the cerebral 5-HT2AR binding (mean MAE=6.63 years, std=0.74 ye
 
 ## Citation
 ```
-@article{D{\"o}rfel2024.02.05.578968,
-  title = {Multimodal Brain Age Prediction Using Machine Learning: Combining Structural {{MRI}} and 5-{{HT2AR PET}} Derived Features},
+@article{Doerfel2024,
+  title = {Multimodal Brain Age Prediction Using Machine Learning: Combining Structural {{MRI}} and 5-{{HT2AR PET-derived}} Features},
+  shorttitle = {Multimodal Brain Age Prediction Using Machine Learning},
   author = {D{\"o}rfel, Ruben P. and {Arenas-Gomez}, Joan M. and Svarer, Claus and Ganz, Melanie and Knudsen, Gitte M. and Svensson, Jonas E. and {Plav{\'e}n-Sigray}, Pontus},
   year = {2024},
-  journal = {bioRxiv : the preprint server for biology},
-  eprint = {https://www.biorxiv.org/content/early/2024/02/28/2024.02.05.578968.full.pdf},
-  publisher = {Cold Spring Harbor Laboratory},
-  doi = {10.1101/2024.02.05.578968},
+  journal = {GeroScience},
+  doi = {10.1007/s11357-024-01148-6},
+  urldate = {2024-05-01},
+  copyright = {All rights reserved},
+  langid = {english},
+  keywords = {5HT2A,brain age,MRI,multimodal,PET},
+  file = {C:\Users\rubendorfel\Zotero\storage\9LBCXEXK\Dörfel et al. - 2024 - Multimodal brain age prediction using machine lear.pdf}
+}
+
 ``` 
 
 ## Usage
